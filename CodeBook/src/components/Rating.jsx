@@ -3,6 +3,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa";
+
 
 const Rating = ({ rating }) => {
   console.log("rat", rating);
@@ -13,9 +15,10 @@ const Rating = ({ rating }) => {
   }
 
   return (
-    <div className="flex">
+    <div className="flex items-center gap-2">
       {newRatingArr.map((ratingArr) => ( 
-        <article>{ratingArr ? <FaStar className="text-[20px]" /> : ""}</article>
+        <article>{ratingArr ? <FaStar className="text-[20px]" /> : <FaRegStar className="text[20px]" />
+}</article>
       ))}
     </div>
   );
