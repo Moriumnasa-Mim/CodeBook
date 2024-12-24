@@ -8,6 +8,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Itemcard from '../pages/Itemcard';
 import Nulldashbord from '../components/Dashbord/Nulldashbord';
+import Loginpage from '../components/login/Loginpage';
+import Signinpage from '../components/login/Signinpage';
 
 const Index = () => {
   return (
@@ -20,6 +22,8 @@ const Index = () => {
             <Route path="/product/:id" element={<ProductDetails/>}/>
             <Route path="/Cartitem" element={<Itemcard/>}/>
             <Route path="/Nulldashbord" element={<Nulldashbord/>}/>
+            <Route path="/Loginpage" element={<Loginpage/>}/>
+            <Route path="/Signinpage" element={<Signinpage/>}/>
         </Routes>
         <Footer/>
   </BrowserRouter> 

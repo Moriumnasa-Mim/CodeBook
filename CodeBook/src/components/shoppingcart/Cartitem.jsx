@@ -50,7 +50,12 @@ const Cartitem = () => {
                 </div>
                 <span className="text-lg font-semibold text-gray-700">29$</span>
                 <button className="ml-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Remove</button>
-            </div>
+            </div>    
+        </div>
+        <div className='text-right'>
+        <button type="button" className="w-cover mt-3 bg-blue-700 text-white text-sm py-2 px-4 rounded-md
+         hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400"> Placeholder
+      </button>
         </div>
     </div>
   )
