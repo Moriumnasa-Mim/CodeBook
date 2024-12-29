@@ -1,0 +1,85 @@
+{
+    "products":[
+        {
+            "id": 1001,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 29,
+            "poster":"https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
+        },
+        {
+            "id": 1002,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 29,
+            "poster":"https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
+        },
+        {
+            "id": 1003,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 29,
+            "poster":"https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
+        },
+        {
+            "id": 1004,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 29,
+            "poster":"https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
+        },
+        {
+            "id": 1005,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 29,
+            "poster":"https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
+        },
+        {
+            "id": 1006,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 29,
+            "poster":"https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
+        }
+    ],
+    "featured_products":[],
+    "orders":[],
+    "users":[]
+}
