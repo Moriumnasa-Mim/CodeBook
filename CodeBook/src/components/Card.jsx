@@ -15,7 +15,7 @@ const Card = ({product}) => {
      shadow-md shadow-black overflow-hidden flex gap-3 flex-col'>
     <div className="top relative">
       
-      <Link to={`product/${product.id}`}>
+      <Link to={`/product/${product.id}`}>
       <img className='w-full h-full object-cover rounded-md' src="https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40" alt="" />
       {product.id}
       </Link>
