@@ -77,6 +77,19 @@
             "in_stock": true,
             "size":5,
             "best_seller": true
+        },
+        {
+            "id": 1007,
+            "name": "Basics To Advanced In React",
+            "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "long_description": "",
+            "price": 20,
+            "poster":"https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image_local":"/assets/apple-1834328_1280.jpg",
+            "rating":"5",
+            "in_stock": true,
+            "size":5,
+            "best_seller": true
         }
     ],
     "upcoming_products":[
