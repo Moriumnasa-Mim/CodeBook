@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdDarkMode } from "react-icons/md";
 import { IoSearchSharp } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
@@ -7,10 +7,16 @@ import { MdLightbulb } from "react-icons/md";
 
 import { CgProfile } from "react-icons/cg";
 import Search from './Search';
-import { Link, Links } from 'react-router';
+
+import { FiSun } from "react-icons/fi";
+
 
 
 const Navbar = () => {
+
+  //dark mode start
+  const[darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("darkMode"))|| false);
+  //dark mode end
 const [showProfileMenu, setShowProfileMenus]= useState(false)
 const[showSearch, setSearch] = useState(false)
 
@@ -31,54 +37,79 @@ const handleSearch= ()=> {
   }
 }
 
+
+//for Darkmode
+useEffect(()=>{
+  localStorage.setItem("darkMode", JSON.stringify(darkMode));
+
+
+  if(darkMode){
+    document.documentElement.classList.add("dark");
+  } else{
+    document.documentElement.classList.remove("dark");
+  }
+},[darkMode])
+
   return (
-    <div>
-      <nav className='flex items-center justify-between py-5 px-5 sm:px-10 md:px-[50px] xl:px--[80px] border-b '>
+    <div className='dark:text-slate-300'>
+      <nav className='flex items-center justify-between py-5 px-5 sm:px-10
+      md:px-[50px] xl:px--[80px] border-b '>
         <div className="left flex gap-1 items-center">
-          <div className="">
-            <p className='text-[25px]' ><MdLightbulb /></p>
-            </div>
-            <div className="text-xl font-bold">
-              CodeBook
-            </div>
+        <div className="">
+        <p className='text-[25px]' ><MdLightbulb /></p>
         </div>
-    {/* menu list */}
-    <div className="">
-      <ul className='flex gap-5'>
-        <li>Home</li>
-        <li>About</li>
-        <li>Products</li>
-        <li>Contact</li>
-        </ul>
+        <div className="text-xl font-bold">
+          CodeBook
         </div>
+        </div>
+
+        {/* menu list */}
+        <div className="">
+          <ul className='flex gap-5'>
+            <li>Home</li>
+            <li>About</li>
+            <li>Products</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
         <div className="right flex gap-5 items-center">
-          <p className='text-[25px]' ><MdDarkMode /></p>
-          <p className='text-[25px]' ><IoSearchSharp onClick={handleSearch} /></p>
-          <p className=' relative text-[25px]'> <FaShoppingCart />
+{/**Dark ICON */}
+          <p onClick={()=>setDarkMode(!darkMode)} className='text-[25px] cursor-pointer' >
+            {
+              darkMode? <MdDarkMode /> : <FiSun />
+            } 
+
+          </p>
+{/**Dark ICON */}
+
+          <p className='text-[25px]' ><IoSearchSharp onClick={handleSearch} />
           
+          </p>
+
+          <p className=' relative text-[25px]' >
+          <FaShoppingCart />
+
           <span className=' absolute -top-3 -right-3 bg-red-500  w-[25px] h-[23px] border-2
            border-white text-center flex items-center justify-center m-auto text-[10px] text-white rounded-full'>10+
-          </span>
+          </span> 
+
           </p>
-          
-          <div className=' relative rounded-md bg-white w-44 text-[25px]' >
+
+          <div className=' relative rounded-md  w-44 text-[25px]' >
             <CgProfile onClick={handleClick} />
 
           {
             showProfileMenu && 
-            <ul className=' absolute py-2 text-sm bg-white w-44 text-gray-700 dark:text-gray-200 shadow-lg'>
-            <Link to='/Cartitem'>
+            
+            <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
-            </Link>
-            <Link to='/Loginpage'>
             <li className='px-4 py-2'>Login</li>
-            </Link>
-            <Link to='/Signinpage'>
             <li className='px-4 py-2'>Register</li>
-            </Link>
           </ul>
           }
-          </div>
+  
+            </div>
         </div>
       </nav>
      {
