@@ -17,7 +17,7 @@ export const getUpcomingProducts = async()=>{
 //Upcomingproduct fetch end
 
 export const getProductDetails = async(id)=>{
-    const response = await fetch(`http://localhost:800/upcoming_products/${id}`)
+    const response = await fetch(`http://localhost:800/products/${id}`)
     const data = await response.json()
     return data;
 }
