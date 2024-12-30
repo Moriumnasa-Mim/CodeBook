@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-key */
-// eslint-disable-next-line no-unused-vars
+ // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
 const faqs = [
@@ -33,7 +32,7 @@ const Question = () => {
   };
 
   return (
-    <section className="p-7 my-10 shadow-sm">
+    <section className="p-7 my-10 shadow-sm dark:text-slate-300">
       <div id="accordion-collapse" data-accordion="collapse">
         <h1 className="text-2xl text-center font-semibold dark:text-slate-100 mb-5 underline underline-offset-8">
           Question in Mind
