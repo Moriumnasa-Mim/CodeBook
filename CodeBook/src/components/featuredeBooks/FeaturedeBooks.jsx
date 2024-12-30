@@ -66,7 +66,7 @@ const FeaturedeBooks = () => {
   return (
     <section>
         <div className='p-10'>
-            <h2 className='text-center text-[30px] font-bold text-black underline underline-offset-4'>Upcoming eBooks</h2>
+            <h2 className='text-center text-[30px] font-bold text-black underline underline-offset-4 dark:text-slate-300'>Upcoming eBooks</h2>
             
             <br /><br />
             <div className=' '>
@@ -79,8 +79,7 @@ const FeaturedeBooks = () => {
                     <Card product={product}/>
                   </article> 
                 ))
-              } 
-               
+              }
            
             </Slider>
             </div>
