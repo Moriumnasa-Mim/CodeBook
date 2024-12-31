@@ -9,7 +9,7 @@
             "poster":"https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
-            "in_stock": true,
+            "in_stock": false,
             "size":5,
             "best_seller": true
         },
@@ -21,10 +21,10 @@
             "price": 29,
             "poster":"https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&w=600",
             "image_local":"/assets/apple-1834328_1280.jpg",
-            "rating":"5",
+            "rating":"15",
             "in_stock": true,
             "size":5,
-            "best_seller": true
+            "best_seller": false
         },
         {
             "id": 1003,
@@ -34,7 +34,7 @@
             "price": 29,
             "poster":"https://images.pexels.com/photos/7441387/pexels-photo-7441387.jpeg?auto=compress&cs=tinysrgb&w=600",
             "image_local":"/assets/apple-1834328_1280.jpg",
-            "rating":"5",
+            "rating":"6",
             "in_stock": true,
             "size":5,
             "best_seller": true
@@ -47,7 +47,7 @@
             "price": 29,
             "poster":"https://images.pexels.com/photos/7437487/pexels-photo-7437487.jpeg?auto=compress&cs=tinysrgb&w=600",
             "image_local":"/assets/apple-1834328_1280.jpg",
-            "rating":"5",
+            "rating":"25",
             "in_stock": true,
             "size":5,
             "best_seller": true
@@ -62,7 +62,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":7,
             "best_seller": true
         },
         {
@@ -75,7 +75,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":2,
             "best_seller": true
         },
         {
@@ -88,7 +88,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":3,
             "best_seller": true
         },
         {
@@ -101,7 +101,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":4,
             "best_seller": true
         },
         {
@@ -114,7 +114,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":1,
             "best_seller": true
         },
         {
@@ -127,7 +127,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":22,
             "best_seller": true
         },
         {
@@ -140,7 +140,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":17,
             "best_seller": true
         },
         {
@@ -153,7 +153,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":33,
             "best_seller": true
         }
     ],
@@ -168,7 +168,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":9,
             "best_seller": true
         },
         {
@@ -181,7 +181,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":10,
             "best_seller": true
         },
         {
@@ -194,7 +194,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":11,
             "best_seller": true
         },
         {
@@ -207,7 +207,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":12,
             "best_seller": true
         },
         {
@@ -220,7 +220,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":12,
             "best_seller": true
         },
         {
@@ -233,7 +233,7 @@
             "image_local":"/assets/apple-1834328_1280.jpg",
             "rating":"5",
             "in_stock": true,
-            "size":5,
+            "size":99,
             "best_seller": true
         }
 
