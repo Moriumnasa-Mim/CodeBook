@@ -61,7 +61,7 @@ const ProductDetails = () => {
                         }
                        
                         
-                        <span className='uppercase bg-slate-100 text-blue-500 border py-1.5 px-3 rounded-md text-[10px] font-semibold'>7MB</span>
+                        <span className='uppercase bg-slate-100 text-blue-500 border py-1.5 px-3 rounded-md text-[10px] font-semibold'>{product?.size}</span>
                     </div>
                     <Link to='' className='py-2 px-3 bg-blue-600 text-sm cursor-pointer rounded-md w-fit text-white font-semibold'>Add to Cart +</Link>
                     <p className='text-sm font-semibold' >{product?.overview}</p>
