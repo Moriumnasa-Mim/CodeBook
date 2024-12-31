@@ -9,7 +9,7 @@ import { CgProfile } from "react-icons/cg";
 import Search from './Search';
 
 import { FiSun } from "react-icons/fi";
-
+import { Link } from 'react-router';
 
 
 const Navbar = () => {
@@ -64,11 +64,11 @@ useEffect(()=>{
         </div>
 
         {/* menu list */}
-        <div className="">
+        <div className="flex gap-5 font-bold">
           <ul className='flex gap-5'>
             <li>Home</li>
             <li>About</li>
-            <li>Products</li>
+            <Link to="/products">products</Link>
             <li>Contact</li>
           </ul>
         </div>
@@ -79,13 +79,10 @@ useEffect(()=>{
             {
               darkMode? <MdDarkMode /> : <FiSun />
             } 
-
           </p>
 {/**Dark ICON */}
 
-          <p className='text-[25px]' ><IoSearchSharp onClick={handleSearch} />
-          
-          </p>
+          <p className='text-[25px]' ><IoSearchSharp onClick={handleSearch} /></p>
 
           <p className=' relative text-[25px]' >
           <FaShoppingCart />
@@ -101,7 +98,6 @@ useEffect(()=>{
 
           {
             showProfileMenu && 
-            
             <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
             <li className='px-4 py-2'>Login</li>
