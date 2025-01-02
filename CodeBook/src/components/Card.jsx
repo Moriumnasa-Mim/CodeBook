@@ -4,11 +4,15 @@ import React from 'react'
 import { FaPlus } from "react-icons/fa6";
 import Rating from './rating';
 import { Link } from 'react-router';
+import { useCart } from '../context/cartContext';
 
 
 
 const Card = ({product}) => {
-
+//add to card er logic start
+  const{cartList, addToCart} = useCart();
+  console.log("CartList",cartList)
+//add to card er logic end
  
   return (
     <div className='card bg-red-500 max-w-[380px] rounded-md
@@ -16,8 +20,7 @@ const Card = ({product}) => {
     <div className="top relative">
       
       <Link to={`/product/${product.id}`}>
-      <img className='w-full h-full object-cover rounded-md' src="https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40" alt="" />
-      {product.id}
+      <img className='w-full h-full object-cover rounded-md' src={product.poster} alt={product.name}/>
       </Link>
       
       
@@ -28,15 +31,13 @@ const Card = ({product}) => {
       }
       
 
-
     </div>
     <div className="bottom flex flex-col gap3 px-3">
-      <h2 className='text-2xl text-gray-900  font-bold'>{product.name}</h2>
-      <p className='text-md '>{product.overview}</p>
+      <h2 className='text-2xl truncate text-gray-900  font-bold'>{product.name}</h2>
+      <p className='text-md '>{product.overview.slice(0, 100)}... See more</p>
+      
         <div className="flex gap-2 items-center text-yellow-200 ">
-
         <Rating rating={product.rating}/>
-        
         <span className='bg-blue-200 px-2 rounded-md text-black text-sm'>{product.rating}</span>
         </div>
 
