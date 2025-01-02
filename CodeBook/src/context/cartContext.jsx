@@ -1,9 +1,11 @@
-import { createContext, useReducer } from "react";
-import { cartReducer } from "../../reducers/cartReducer";
+import { createContext, useContext,  } from "react";
+
+import { useReducer } from "react";
+import { cartReducer } from "../reducers/cartReducer";
 
 const cartIntialState = {
     cartList: [],
-    total: 0
+    total: 0,
 }
 
 const CartContext = createContext(cartIntialState);
@@ -23,18 +25,24 @@ export const CartProvider = ({children})=>{
             }
         })
 
-        const value ={
-            cartList: state.cartList,
-            total: state.total,
-            //addToCart,
-            //removeFromCart,
-            //clearCart
-        }
-
-        return(
-            <CartContext.Provider value={value}>
-                {children}
-            </CartContext.Provider>
-        )
     }
+
+    const value ={
+        cartList: state.cartList,
+        total: state.total,
+        //addToCart,
+        //removeFromCart,
+        //clearCart
+    }
+
+    return(
+        <CartContext.Provider value={value}>
+            {children}
+        </CartContext.Provider>
+    )
+}
+
+export const useCart = () => {
+    const context = useContext(CartContext);
+    return context;
 }
