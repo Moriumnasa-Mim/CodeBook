@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+//sir er tar nam cartList.jsx
+import React, { useState } from 'react'
+import Cartcheckout from '../../pages/Cartcheckout'
 
 const Cartitem = () => {
+    const[cartCheck, setCartCheck] = useState(false)
   return (
     <div className='px-5 py-8 md:p-10 mx-auto bg-white shadow-md rounded-lg'>
    
@@ -53,9 +56,17 @@ const Cartitem = () => {
             </div>    
         </div>
         <div className='text-right'>
-        <button type="button" className="w-cover mt-3 bg-blue-700 text-white text-sm py-2 px-4 rounded-md
-         hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400"> Placeholder
+        
+        <button onClick={()=> setCartCheck(!cartCheck)}
+        type="button" className="w-cover mt-3 bg-blue-700 text-white text-sm py-2 px-4 rounded-md 
+        hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400"> 
+         Placeholder
       </button>
+      
+      {
+        cartCheck && <Cartcheckout setCartCheck={setCartCheck} />
+      }       
+
         </div>
     </div>
   )
