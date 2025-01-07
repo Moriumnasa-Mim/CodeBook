@@ -2,9 +2,23 @@
 //sir er tar nam cartList.jsx
 import React, { useState } from 'react'
 import Cartcheckout from '../../pages/Cartcheckout'
+import { useCart } from '../../context/cartContext'
 
 const Cartitem = () => {
+
+    /**7jan start */
+
+    const { cartList } = useCart()
+
+    /**7 jan close */
+
     const[cartCheck, setCartCheck] = useState(false)
+
+
+    
+
+
+
   return (
     <div className='px-5 py-8 md:p-10 mx-auto bg-white shadow-md rounded-lg'>
    
@@ -55,20 +69,34 @@ const Cartitem = () => {
                 <button className="ml-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Remove</button>
             </div>    
         </div>
-        <div className='text-right'>
         
-        <button onClick={()=> setCartCheck(!cartCheck)}
+        <section className='p-10'>
+
+            {
+                cartList?.map((cartProduct)=>(
+                    <Cart key={cartProduct.id} product = {cartProduct}/>
+                ))
+            }
+            
+        </section>
+
+
+    <div className='text-right'>
+        
+    <button onClick={()=> setCartCheck(!cartCheck)}
         type="button" className="w-cover mt-3 bg-blue-700 text-white text-sm py-2 px-4 rounded-md 
         hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400"> 
          Placeholder
-      </button>
-      
+    </button>
+
+
       {
         cartCheck && <Cartcheckout setCartCheck={setCartCheck} />
-      }       
+      }    
 
-        </div>
+
     </div>
+</div>
   )
 }
 
