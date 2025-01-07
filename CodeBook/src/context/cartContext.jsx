@@ -30,7 +30,7 @@ export const CartProvider = ({children})=>{
     const value ={
         cartList: state.cartList,
         total: state.total,
-        //addToCart,
+        addToCart,
         //removeFromCart,
         //clearCart
     }
