@@ -29,7 +29,6 @@ const Card = ({product}) => {
         <h2>Best Seller</h2>
       </div>:""
       }
-      
 
     </div>
     <div className="bottom flex flex-col gap3 px-3">
@@ -43,7 +42,7 @@ const Card = ({product}) => {
 
         <div className="flex items-center justify-between">
           <p className='text-3xl text-black font-semibold'>{product.price}</p>
-          <button className='flex items-center gap-2 bg-blue-500 text-white p-3  '>Add to cart <FaPlus /> 
+          <button onClick ={()=>addToCart(product)} className='flex items-center gap-2 bg-blue-500 text-white p-3  '>Add to cart <FaPlus /> 
           </button>
         </div>
     </div>
