@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import Cartcheckout from "../../pages/Cartcheckout";
 import { useCart } from "../../context/cartContext";
 
-const Cartitem = () => {
+const Cartitem = (product) => {
   /**7jan start */
 
-  const { cartList } = useCart();
+  const { cartList, total } = useCart();
 
   /**7 jan close */
 
@@ -17,28 +17,33 @@ const Cartitem = () => {
     <div className="px-5 py-8 md:p-10 mx-auto bg-white shadow-md rounded-lg">
       <div className="flex justify-between items-center border-b pb-4 mb-4">
         <h2 className="text-2xl font-bold text-gray-800">
-          TOTAL AMOUNT: <span className="text-blue-600">($275)</span>
+          TOTAL AMOUNT: 
+          <span className="text-blue-600">{total}</span>
         </h2>
         <span className="text-lg font-semibold text-gray-700">
-          TOTAL ITEM: <span className="text-blue-600">(5)</span>
+          TOTAL ITEM: 
+          <span className="text-blue-600">{cartList.length}</span>
         </span>
       </div>
 
       <div className="space-y-4 ">
         
         {cartList?.map((cartProduct) => (
-          <div key={cartProduct.id} className="flex items-center justify-between p-4 border rounded-md">
+          <div key={cartProduct.id} product={cartProduct} 
+          className="flex items-center justify-between p-4 border rounded-md">
             <img
-              src="https://via.placeholder.com/100"
+              src={product.poster}
               alt="Django"
               className="w-20 h-20 rounded-md object-cover"
             />
             <div className="flex-1 ml-4">
               <h3 className="text-lg font-medium text-gray-800">
-                Django Framework for Beginners
+                {product.name}
               </h3>
             </div>
-            <span className="text-lg font-semibold text-gray-700">19$</span>
+            <span className="text-lg font-semibold text-gray-700">
+              {product.price}
+            </span>
             <button className="ml-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
               Remove
             </button>
