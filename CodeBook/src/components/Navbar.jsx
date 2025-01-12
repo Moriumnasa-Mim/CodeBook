@@ -10,6 +10,7 @@ import Search from './Search';
 
 import { FiSun } from "react-icons/fi";
 import { Link } from 'react-router';
+import { useCart } from '../context/cartContext';
 
 
 const Navbar = () => {
@@ -17,6 +18,10 @@ const Navbar = () => {
   //dark mode start
   const[darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("darkMode"))|| false);
   //dark mode end
+
+  // add to cart import start
+  const {cartList} = useCart()
+  // add to cart import end
 const [showProfileMenu, setShowProfileMenus]= useState(false)
 const[showSearch, setSearch] = useState(false)
 
@@ -84,14 +89,19 @@ useEffect(()=>{
 
           <p className='text-[25px]' ><IoSearchSharp onClick={handleSearch} /></p>
 
+          <Link to="/Cartitem">
           <p className=' relative text-[25px]' >
           <FaShoppingCart />
 
           <span className=' absolute -top-3 -right-3 bg-red-500  w-[25px] h-[23px] border-2
-           border-white text-center flex items-center justify-center m-auto text-[10px] text-white rounded-full'>10+
+           border-white text-center flex items-center justify-center m-auto text-[10px] text-white rounded-full'>
+            {cartList.length}
           </span> 
 
           </p>
+          </Link>
+
+
 
           <div className=' relative rounded-md  w-44 text-[25px]' >
             <CgProfile onClick={handleClick} />
