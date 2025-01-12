@@ -47,14 +47,12 @@ const Cartitem = (product) => {
               {cartProduct.price}
             </span>
 
-            <div onClick={()=>removeToCart(product)}
+            <div onClick={()=>removeToCart(cartProduct)}
             className="ml-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
             <button >
               Remove
             </button>
             </div>
-
-            
 
           </div>
         ))}
@@ -65,18 +63,15 @@ const Cartitem = (product) => {
           onClick={() => setCartCheck(!cartCheck)}
           type="button"
           className="w-cover mt-3 bg-blue-700 text-white text-sm py-2 px-4 rounded-md 
-        hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400"
-        >
+        hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400">
           Placeholder
         </button>
-
 
         <button
           onClick={() => clearCart()}
           type="button"
           className="w-cover mt-3 bg-blue-700 text-white text-sm py-2 px-4 rounded-md 
-        hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400"
-        >
+        hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-400">
           ClearCart
         </button>
 
