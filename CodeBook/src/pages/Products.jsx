@@ -4,16 +4,25 @@ import Card from '../components/Card'
 import { CiMenuKebab } from 'react-icons/ci'
 
 import getProductList from '../apiServices/ProductServices'
+import { useLocation } from 'react-router'
 
 const Products = () => {
 
 const[products, setProducts] = useState()
+
+// search er kaj start
+const search = useLocation().search;
+const searchTerm = new URLSearchParams(search).get("q");
+
+//console.log(searchTerm)
+//search er kaj sesh
+
 console.log(products)
 
   useEffect(()=>{
      async function fetchAllproduct(){
       try{
-        const productsData = await getProductList();
+        const productsData = await getProductList(searchTerm);
         setProducts(productsData);
       }
       catch(error){
