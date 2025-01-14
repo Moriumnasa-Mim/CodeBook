@@ -9,7 +9,7 @@ import { useCart } from '../context/cartContext';
 
 const Card = ({product}) => {
 //add to card er logic start
-const{cartList, addToCart} = useCart();
+const{cartList, addToCart, removeToCart} = useCart();
 console.log("CartList",cartList)
 //add to card er logic end
 
@@ -66,7 +66,7 @@ useEffect(()=>{
           </button>
           }
           
-          {inCart && <button onClick ={()=>addToCart(product)} 
+          {inCart && <button onClick ={()=>removeToCart(product)} 
           className='flex items-center gap-2 bg-green-500 text-white p-3  '>
             Remove to cart 
           <FaPlus /> 
