@@ -1,9 +1,20 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router'
 
 const Search = () => {
 
-
+// search backend start
     const searchRef = useRef()
+    const navigate = useNavigate()
+
+    const handelSubmit = (event) => {
+        event.preventDefault();
+
+        navigate(`/products?q=${searchRef.current.value}`);
+
+//search backend close
+
+    }
   return (
     <div>
 
