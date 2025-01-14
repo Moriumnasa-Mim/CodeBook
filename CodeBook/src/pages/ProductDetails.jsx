@@ -4,15 +4,35 @@ import Rating from '../components/rating'
 import { Link, useParams } from 'react-router'
 import { getProductDetails } from '../apiServices/ProductServices';
 import { useCart } from '../context/cartContext';
+ 
   
 const ProductDetails = () => {
+
+  const { id } = useParams();//Get the 'id' from the URL
+
   const [product, setProductDetails]= useState()
 
   //add to cart item start
-  const{addToCart}=useCart()
+  const{cartList, addToCart, removeToCart}=useCart()
   //add to cart item end
-    const { id } = useParams();//Get the 'id' from the URL
 
+  //add to card to remove to card start
+  const[inCart,setInCart]= useState(false)
+  
+  useEffect(()=>{
+    const cartItem = cartList.find((item)=>item.id == id)
+  
+    if(cartItem){
+      setInCart(true)
+    }
+    else{
+      setInCart(false)
+    }
+  }
+  ,[cartList, id])
+  //add to card to remove to card end
+
+  
     //const product = products?.find((p)=> p.id === parseInt(id, 10))
     //console.log(product);
 
@@ -57,7 +77,6 @@ const ProductDetails = () => {
                           : ""
                         }
                         
-                        
                         {product?.in_stock ? 
                         <span className='uppercase bg-slate-100 text-emerald-600 border py-1.5 px-3 rounded-md text-[10px] font-semibold'>INSTOCK</span> 
                         : 
@@ -67,10 +86,18 @@ const ProductDetails = () => {
                         <span className='uppercase bg-slate-100 text-blue-500 border py-1.5 px-3 rounded-md text-[10px] font-semibold'>{product?.size}</span>
                     </div>
 
-                    <button onClick ={()=>addToCart(product)}
+                    {!inCart && <button onClick ={()=>addToCart(product)}
                     className='py-2 px-3 bg-blue-600 text-sm cursor-pointer rounded-md w-fit text-white font-semibold'>
                     Add to Cart +
                     </button>
+                    }
+
+                    {inCart && <button onClick ={()=>removeToCart(product)}
+                    className='py-2 px-3 bg-blue-600 text-sm cursor-pointer rounded-md w-fit text-white font-semibold'>
+                    Remove to Cart +
+                    </button>
+                    }
+
                     <p className='text-sm font-semibold' >{product?.overview}</p>
                 </div>
             </div>
