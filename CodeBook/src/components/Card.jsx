@@ -6,13 +6,17 @@ import Rating from './rating';
 import { Link } from 'react-router';
 import { useCart } from '../context/cartContext';
 
-
 const Card = ({product}) => {
+//add to card er logic start
+const{cartList, addToCart} = useCart();
+console.log("CartList",cartList)
+//add to card er logic end
 
 //add to card to remove to card start
 const[inCart,setInCart]= useState(false)
 useEffect(()=>{
   const cartItem = cartList.find((item)=>item.id == product?.id)
+  console.log(cartItem)
 
   if(cartItem){
     setInCart(true)
@@ -20,14 +24,10 @@ useEffect(()=>{
   else{
     setInCart(false)
   }
-},[cartList, product?.id])
+}
+,[cartList, product?.id])
 //add to card to remove to card end
 
-//add to card er logic start
-  const{cartList, addToCart} = useCart();
-  console.log("CartList",cartList)
-//add to card er logic end
- 
   return (
     <div className='card bg-red-500 max-w-[380px] rounded-md
      shadow-md shadow-black overflow-hidden flex gap-3 flex-col'>
@@ -55,16 +55,21 @@ useEffect(()=>{
 
         <div className="flex items-center justify-between">
           <p className='text-3xl text-black font-semibold'>{product.price}</p>
-
-{!inCart && <button onClick ={()=>addToCart(product)} 
+          
+          {!inCart && <button onClick ={()=>addToCart(product)} 
           className='flex items-center gap-2 bg-blue-500 text-white p-3  '>
             Add to cart 
           <FaPlus /> 
           </button>
           }
           
-
-
+          {inCart && <button onClick ={()=>addToCart(product)} 
+          className='flex items-center gap-2 bg-blue-500 text-white p-3  '>
+            Remove to cart 
+          <FaPlus /> 
+          </button>
+          }
+          
         </div>
     </div>
     </div>
