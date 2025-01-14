@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Search = () => {
+
+
+    const searchRef = useRef()
   return (
     <div>
 
