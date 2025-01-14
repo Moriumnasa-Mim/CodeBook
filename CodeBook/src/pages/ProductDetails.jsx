@@ -31,8 +31,8 @@ const ProductDetails = () => {
   }
   ,[cartList, id])
   //add to card to remove to card end
-
   
+
     //const product = products?.find((p)=> p.id === parseInt(id, 10))
     //console.log(product);
 
@@ -77,6 +77,7 @@ const ProductDetails = () => {
                           : ""
                         }
                         
+                        
                         {product?.in_stock ? 
                         <span className='uppercase bg-slate-100 text-emerald-600 border py-1.5 px-3 rounded-md text-[10px] font-semibold'>INSTOCK</span> 
                         : 
@@ -93,7 +94,7 @@ const ProductDetails = () => {
                     }
 
                     {inCart && <button onClick ={()=>removeToCart(product)}
-                    className='py-2 px-3 bg-blue-600 text-sm cursor-pointer rounded-md w-fit text-white font-semibold'>
+                    className='py-2 px-3 bg-green-500 text-sm cursor-pointer rounded-md w-fit text-white font-semibold'>
                     Remove to Cart +
                     </button>
                     }
