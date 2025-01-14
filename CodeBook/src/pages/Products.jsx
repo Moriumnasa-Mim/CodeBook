@@ -25,8 +25,8 @@ console.log(products)
 
   return (
     <section>
-      <div className='header flex justify-between p-10 font-bold'>
-        <h1>All eBooks(15)</h1>
+      <div className='header flex justify-between p-10 font-bold '>
+        <h1 className='dark:text-slate-100'>All eBooks(15)</h1>
 
         <p className='bg-gray-200 p-3 rounded-md'>
           <CiMenuKebab/>
