@@ -1,6 +1,6 @@
 //data fetch kora start
- const getProductList = async()=>{
-    const productList = await fetch("http://localhost:800/products")
+ const getProductList = async(searchTerm)=>{
+    const productList = await fetch(`http://localhost:800/products?q=${searchTerm}`)
 
     const data = await productList.json()
     return data;
