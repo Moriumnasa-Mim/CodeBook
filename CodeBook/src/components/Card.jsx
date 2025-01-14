@@ -6,8 +6,6 @@ import Rating from './rating';
 import { Link } from 'react-router';
 import { useCart } from '../context/cartContext';
 
-
-
 const Card = ({product}) => {
 //add to card er logic start
   const{cartList, addToCart} = useCart();
@@ -21,8 +19,7 @@ const Card = ({product}) => {
       
       <Link to={`/product/${product.id}`}>
       <img className='w-full h-full object-cover rounded-md' src={product.poster} alt={product.name}/>
-      </Link>
-      
+      </Link>     
       
       {product.best_seller? 
       <div className="absolute top-5 left-5 bg-orange-500 px-3 py-2 text-white rounded-md">
