@@ -22,6 +22,7 @@ const Navbar = () => {
   // add to cart import start
   const {cartList} = useCart()
   // add to cart import end
+  
 const [showProfileMenu, setShowProfileMenus]= useState(false)
 const[showSearch, setSearch] = useState(false)
 
@@ -101,8 +102,6 @@ useEffect(()=>{
           </p>
           </Link>
 
-
-
           <div className=' relative rounded-md  w-44 text-[25px]' >
             <CgProfile onClick={handleClick} />
 
@@ -111,7 +110,9 @@ useEffect(()=>{
             <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
             <li className='px-4 py-2'>Login</li>
-            <li className='px-4 py-2'>Register</li>
+
+            
+            <li className='px-4 py-2'> <Link to="/Signinpage">Register</Link> </li>
           </ul>
           }
   
