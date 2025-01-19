@@ -41,7 +41,7 @@ console.log(products)
     
      }
      fetchAllproduct()
-  },[])
+  },[searchTerm])
 
   return (
     <section className='relative'>
