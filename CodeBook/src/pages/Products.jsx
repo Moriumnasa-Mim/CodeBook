@@ -34,7 +34,7 @@ console.log(products)
       }
       /**Loading Start */
       finally{
-        
+        setIsLoading(false)
       }
       /**Loading End */
      }
