@@ -6,11 +6,12 @@ import { CiMenuKebab } from 'react-icons/ci'
 
 import getProductList from '../apiServices/ProductServices'
 import { useLocation } from 'react-router'
+import Loading from '../components/Loading'
 
 const Products = () => {
 
 const[products, setProducts] = useState()
-const[isLoading setIsLoading]=useState(false)
+const[isLoading, setIsLoading]=useState(false)
 // search er kaj start
 const search = useLocation().search;
 const searchTerm = new URLSearchParams(search).get("q");
@@ -32,17 +33,22 @@ console.log(products)
       catch(error){
         alert(error.message)
       }
-      /**Loading Start */
+     /**loading start */
       finally{
         setIsLoading(false)
       }
-      /**Loading End */
+      /**loading end */
+    
      }
      fetchAllproduct()
   },[])
 
   return (
-    <section>
+    <section className='relative'>
+      {isLoading && <Loading/>}
+
+      
+
       <div className='header flex justify-between p-10 font-bold '>
         <h1 className='dark:text-slate-100'>All eBooks(15)</h1>
 
