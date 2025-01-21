@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { ImCross } from "react-icons/im";
 
 
+// eslint-disable-next-line react/prop-types
 const Cartcheckout = ({setCartCheck}) => {
   return (
 <section>
@@ -16,7 +16,7 @@ const Cartcheckout = ({setCartCheck}) => {
             
             <div className='1 Heading flex items-center justify-between uppercase dark:text-white text-xl'>
                 <span>Card payment</span>
-                <span className='text-[20px] w-[25px] h-[25px]
+                <span onClick={()=> setCartCheck(false)} className='text-[20px] w-[25px] h-[25px]
                  bg-slate-500 flex justify-center rounded-[50px] items-center 
                  hover:bg-slate-600 text-white cursor-pointer'>
                     x
