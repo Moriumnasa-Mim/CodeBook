@@ -47,11 +47,9 @@ const handleSearch= ()=> {
   //search hide end
 }
 
-
 //for Darkmode
 useEffect(()=>{
   localStorage.setItem("darkMode", JSON.stringify(darkMode));
-
 
   if(darkMode){
     document.documentElement.classList.add("dark");
@@ -113,11 +111,9 @@ useEffect(()=>{
 
           {
             showProfileMenu && 
-            <ul setShowProfileMenus={setShowProfileMenus} className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
+            <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
-            <li className='px-4 py-2'>Login</li>
-
-            
+            <li className='px-4 py-2'><Link to="/Loginpage">Login</Link></li>
             <li className='px-4 py-2'> <Link to="/Signinpage">Register</Link> </li>
           </ul>
           }
