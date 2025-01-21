@@ -2,11 +2,16 @@
 import React from 'react'
 
 const Loginpage = () => {
+    const handleLogin = async()=>{
+        
+
+    }
   return (
   <div className='bg-zinc-100 flex items-center justify-center min-h-screen'>
    <div className="w-full max-w-sm bg-transparent p-6 rounded-lg shadow-lg">
     <h2 className="text-xl font-bold text-left text-gray-700 mb-4 ">Log In</h2>
-    <form className='space-y-4 md:space-y-6'>
+    <form onSubmit={handleLogin}
+    className='space-y-4 md:space-y-6'>
       <div className="mb-4">
         <label htmlFor="email" className="block text-gray-600 mb-2">Your email</label>
         <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none 
