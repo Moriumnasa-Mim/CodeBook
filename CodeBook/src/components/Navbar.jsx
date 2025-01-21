@@ -24,7 +24,9 @@ const Navbar = () => {
   // add to cart import end
   
 const [showProfileMenu, setShowProfileMenus]= useState(false)
+//search e click kore submit howar por search button hide start
 const[showSearch, setSearch] = useState(false)
+//search e click kore submit howar por search button hide end
 
 const handleClick = () => {
   if ( showProfileMenu === true ) {
@@ -33,7 +35,7 @@ const handleClick = () => {
     setShowProfileMenus(true)
   }
 }
-
+//search hide start
 const handleSearch= ()=> {
   if(showSearch === true){
     setSearch(false)
@@ -41,6 +43,7 @@ const handleSearch= ()=> {
   else{
     setSearch(true)
   }
+  //search hide end
 }
 
 
@@ -88,7 +91,9 @@ useEffect(()=>{
           </p>
 {/**Dark ICON */}
 
-          <p className='text-[25px]' ><IoSearchSharp onClick={handleSearch} /></p>
+          <p className='text-[25px] ' >
+            <IoSearchSharp onClick={handleSearch} />
+          </p>
 
           <Link to="/Cartitem">
           <p className=' relative text-[25px]' >
@@ -120,7 +125,7 @@ useEffect(()=>{
         </div>
       </nav>
      {
-      showSearch &&  <Search/>
+      showSearch &&  <Search setSearch={setSearch}/>
      }
      
     </div>
