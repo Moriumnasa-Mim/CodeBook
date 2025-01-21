@@ -1,10 +1,30 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useRef } from 'react'
+import { useNavigate } from 'react-router';
 
 const Loginpage = () => {
-    const handleLogin = async()=>{
-        
+    const email = useRef();
+    const password = useRef();
 
+    const navigate = useNavigate()
+    const handleLogin = async(event)=>{
+
+    event.preventDefault();
+    try{
+        const authDetail = {
+            email: email.current.value,
+            password: password.current.value
+        }
+
+        const loginData = await login(authDetail)
+        loginData.accessToken? navigate("/products"): alert("check your Email or Password")
+
+    }
+    catch{
+        alert("Network problem !!!")
+
+    }
     }
   return (
   <div className='bg-zinc-100 flex items-center justify-center min-h-screen'>
