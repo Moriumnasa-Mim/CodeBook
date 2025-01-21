@@ -47,9 +47,11 @@ const handleSearch= ()=> {
   //search hide end
 }
 
+
 //for Darkmode
 useEffect(()=>{
   localStorage.setItem("darkMode", JSON.stringify(darkMode));
+
 
   if(darkMode){
     document.documentElement.classList.add("dark");
@@ -106,7 +108,7 @@ useEffect(()=>{
           </p>
           </Link>
 
-          <div className=' relative rounded-md  w-44 text-[25px]' >
+          <div className=' relative rounded-md  w-44 text-[25px] z-50' >
             <CgProfile onClick={handleClick} />
 
           {
