@@ -24,6 +24,7 @@ const Navbar = () => {
   // add to cart import end
   
 const [showProfileMenu, setShowProfileMenus]= useState(false)
+
 //search e click kore submit howar por search button hide start
 const[showSearch, setSearch] = useState(false)
 //search e click kore submit howar por search button hide end
@@ -75,10 +76,10 @@ useEffect(()=>{
         {/* menu list */}
         <div className="flex gap-5 font-bold">
           <ul className='flex gap-5'>
-            <li>Home</li>
-            <li>About</li>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
             <Link to="/products">products</Link>
-            <li>Contact</li>
+            <Link to="/contact">Contact</Link>
           </ul>
         </div>
 
@@ -112,7 +113,7 @@ useEffect(()=>{
 
           {
             showProfileMenu && 
-            <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
+            <ul setShowProfileMenus={setShowProfileMenus} className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
             <li className='px-4 py-2'>Login</li>
 
@@ -120,7 +121,6 @@ useEffect(()=>{
             <li className='px-4 py-2'> <Link to="/Signinpage">Register</Link> </li>
           </ul>
           }
-  
             </div>
         </div>
       </nav>
