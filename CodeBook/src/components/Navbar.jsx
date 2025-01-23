@@ -15,6 +15,10 @@ import { useCart } from '../context/cartContext';
 
 const Navbar = () => {
 
+  //login korle logout show korbe and logout thakle login dekhabe start
+  const token = JSON.parse(sessionStorage.getItem("token"))
+  //login korle logout show korbe and logout thakle login dekhabe end
+
   //dark mode start
   const[darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("darkMode"))|| false);
   //dark mode end
