@@ -7,9 +7,10 @@ import ProductDetails from '../pages/ProductDetails';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Itemcard from '../pages/Itemcard';
-import Nulldashbord from '../components/Dashbord/Nulldashbord';
-import Loginpage from '../components/login/Loginpage';
 import Signinpage from '../components/login/Signinpage';
+import Loginpage from '../components/login/Loginpage';
+import ProtectedRoute from './ProtectedRoute';
+
 
 const Index = () => {
   return (
@@ -18,12 +19,13 @@ const Index = () => {
         <Navbar/>
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Cartitem" element={<ProtectedRoute><Itemcard/></ProtectedRoute>}/>
             <Route path="/products" element={<Products/>}/>
             <Route path="/product/:id" element={<ProductDetails/>}/>
-            <Route path="/Cartitem" element={<Itemcard/>}/>
-            <Route path="/Nulldashbord" element={<Nulldashbord/>}/>
-            <Route path="/Loginpage" element={<Loginpage/>}/>
+            <Route path="/product/:id" element={<ProductDetails/>}/>
             <Route path="/Signinpage" element={<Signinpage/>}/>
+            <Route path="/Loginpage" element={<Loginpage/>}/>
+            
         </Routes>
         <Footer/>
   </BrowserRouter> 
