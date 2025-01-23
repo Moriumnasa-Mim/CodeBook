@@ -119,8 +119,18 @@ useEffect(()=>{
             showProfileMenu && 
             <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
-            <li className='px-4 py-2'><Link to="/Loginpage">Login</Link></li>
-            <li className='px-4 py-2'> <Link to="/Signinpage">Register</Link> </li>
+            {
+              token? <li className='px-4 py-2'>Logout</li>: 
+              <>
+              <li className='px-4 py-2'>
+                <Link to="/login">Login</Link>
+              </li>
+              
+              <li className='px-4 py-2'>
+                <Link to="/signUp">Register</Link>
+              </li>
+              </>
+            }
           </ul>
           }
             </div>
