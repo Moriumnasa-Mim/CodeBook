@@ -53,14 +53,14 @@ const handleSearch= ()=> {
 
 }
 
-  //logout work start
+  //login korle logout dekhabe logout thakle login start
   const navigate = useNavigate()
   const handleLogout = ()=>{
     sessionStorage.removeItem("token")
     sessionStorage.removeItem("cbid")
     navigate("/Loginpage")
   }
-  //logout work end
+  //login korle logout dekhabe logout thakle login start
 
 //for Darkmode
 useEffect(()=>{
