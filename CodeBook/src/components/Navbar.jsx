@@ -9,7 +9,7 @@ import { CgProfile } from "react-icons/cg";
 import Search from './Search';
 
 import { FiSun } from "react-icons/fi";
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { useCart } from '../context/cartContext';
 
 
@@ -49,8 +49,18 @@ const handleSearch= ()=> {
     setSearch(true)
   }
   //search hide end
+
+
 }
 
+  //logout work start
+  const navigate = useNavigate()
+  const handleLogout = ()=>{
+    sessionStorage.removeItem("token")
+    sessionStorage.removeItem("cbid")
+    navigate("/Loginpage")
+  }
+  //logout work end
 
 //for Darkmode
 useEffect(()=>{
@@ -120,16 +130,14 @@ useEffect(()=>{
             <ul className=' absolute py-2 text-sm shadow-lg bg-white w-44 text-gray-700 dark:text-[#1E293B]'>
             <li className='px-4 py-2 '>All eBooks</li>
             {
-              token? <li className='px-4 py-2'>Logout</li>: 
-              <>
-              <li className='px-4 py-2'>
-                <Link to="/login">Login</Link>
+              token? <li onClick={handleLogout} className='px-4 py-2'>Logout</li>: 
+              
+              <li>
+                <Link to="/Loginpage">Login</Link>
+              
+                <Link to="/Signinpagep">Register</Link>
               </li>
               
-              <li className='px-4 py-2'>
-                <Link to="/signUp">Register</Link>
-              </li>
-              </>
             }
           </ul>
           }
