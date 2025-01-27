@@ -133,9 +133,9 @@ useEffect(()=>{
               token? <li onClick={handleLogout} className='px-4 py-2'>Logout</li>: 
               
               <li>
-                <Link to="/Loginpage">Login</Link>
+                <Link className='flex flex-col gap-5 px-4 py-2r' to="/Loginpage">Login</Link> 
               
-                <Link to="/Signinpagep">Register</Link>
+                <Link className='flex flex-col gap-5 px-4 py-2' to="/Signinpagep">Register</Link>
               </li>
               
             }
