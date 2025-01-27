@@ -1,9 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getUser } from '../apiServices/orderAuthServices'
 
 
 // eslint-disable-next-line react/prop-types
 const Cartcheckout = ({setCartCheck}) => {
+    //submit korar porer kaj orderAuthservices.jsx theke niye asha
+    const [user, setUser]=useState()
+    useEffect(()=>{
+        async function fetchData(){
+            try{
+                const data = await getUser()
+                console.log(data)
+                setUser(data);
+            }catch (error){
+                alert('not found user')
+            }
+        };
+        fetchData();
+    },[]);
+
+
+
   return (
 <section>
     <div className='fixed top-0 left-0 w-full h-full bg-black bg-opacity-50'>
